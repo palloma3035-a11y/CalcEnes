@@ -1,0 +1,120 @@
+:root{
+  --bg: #0f1724;
+  --panel: #0b1220;
+  --accent: #0ea5a4;
+  --key: #1f2937;
+  --key-2: #111827;
+  --text: #e6eef6;
+  --danger: #ef4444;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:linear-gradient(160deg,var(--bg),#071026 60%);
+  color:var(--text);
+  padding:2rem;
+}
+
+.calculator{
+  width:320px;
+  max-width:95vw;
+  background:linear-gradient(180deg,var(--panel),#071124);
+  border-radius:12px;
+  padding:16px;
+  box-shadow:0 10px 30px rgba(2,6,23,0.6);
+}
+
+.screen{
+  background:linear-gradient(180deg,#061224 40%, #07142a 100%);
+  border-radius:8px;
+  padding:12px;
+  margin-bottom:12px;
+  color:var(--text);
+  min-height:64px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:4px;
+}
+
+.expression{
+  color:#93c5fd;
+  font-size:0.9rem;
+  min-height:18px;
+  text-align:right;
+  opacity:0.9;
+  word-break:break-all;
+}
+
+.result{
+  font-size:1.6rem;
+  font-weight:600;
+  text-align:right;
+  word-break:break-all;
+}
+
+.keys{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
+}
+
+.btn{
+  background:linear-gradient(180deg,var(--key),var(--key-2));
+  border:0;
+  color:var(--text);
+  padding:12px;
+  border-radius:8px;
+  font-size:1.05rem;
+  cursor:pointer;
+  transition:transform 0.06s ease, box-shadow 0.06s ease;
+  box-shadow:0 3px 0 rgba(0,0,0,0.4);
+  user-select:none;
+}
+
+.btn:active{transform:translateY(2px);box-shadow:none}
+.btn:focus{outline:3px solid rgba(14,165,164,0.15);outline-offset:2px}
+
+.operator{background:linear-gradient(180deg,#2b3440,#1f2937)}
+.equals{grid-column:span 1;background:linear-gradient(180deg,var(--accent),#068b86); color:#042023; font-weight:700}
+.function{background:linear-gradient(180deg,#3b2b2b,#2a1f1f); color:var(--text)}
+
+.hint{
+  margin-top:10px;
+  font-size:0.78rem;
+  color:#9fb4c8;
+  text-align:center;
+}
+
+/* responsive larger layout on wide screens */
+@media (min-width:520px){
+  .calculator{width:380px}
+  .result{font-size:2rem}
+}
+
+/* Footer matching calculator design */
+.site-footer{
+  margin-top:14px;
+  margin-left:0;
+  margin-right:0;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:0.82rem;
+  color:#9fb4c8;
+  opacity:0.95;
+  margin-top:auto;
+  padding:0.75rem 0 0;
+}
+.site-footer p{margin:0}
+.site-footer a{color:var(--accent);text-decoration:none;font-weight:600}
+.site-footer a:hover{text-decoration:underline}

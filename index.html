@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="calculator" aria-label="Simple calculator">
+    <div class="screen" role="group" aria-label="Calculator display">
+      <div class="expression" id="expression" aria-hidden="true">0</div>
+      <div class="result" id="result" role="status" aria-live="polite" aria-atomic="true">0</div>
+    </div>
+
+    <div class="keys" role="application" aria-label="Calculator keys">
+      <button class="btn function" data-action="clear" type="button" aria-label="Clear (Escape)">AC</button>
+      <button class="btn function" data-action="backspace" type="button" aria-label="Backspace (Backspace)">DEL</button>
+      <button class="btn operator" data-value="(" type="button" aria-label="Left parenthesis">(</button>
+      <button class="btn operator" data-value=")" type="button" aria-label="Right parenthesis">)</button>
+
+      <button class="btn number" data-value="7" type="button" aria-label="Seven">7</button>
+      <button class="btn number" data-value="8" type="button" aria-label="Eight">8</button>
+      <button class="btn number" data-value="9" type="button" aria-label="Nine">9</button>
+      <button class="btn operator" data-value="÷" type="button" aria-label="Divide">÷</button>
+
+      <button class="btn number" data-value="4" type="button" aria-label="Four">4</button>
+      <button class="btn number" data-value="5" type="button" aria-label="Five">5</button>
+      <button class="btn number" data-value="6" type="button" aria-label="Six">6</button>
+      <button class="btn operator" data-value="×" type="button" aria-label="Multiply">×</button>
+
+      <button class="btn number" data-value="1" type="button" aria-label="One">1</button>
+      <button class="btn number" data-value="2" type="button" aria-label="Two">2</button>
+      <button class="btn number" data-value="3" type="button" aria-label="Three">3</button>
+      <button class="btn operator" data-value="-" type="button" aria-label="Minus">−</button>
+
+      <button class="btn number" data-value="0" type="button" aria-label="Zero">0</button>
+      <button class="btn number" data-value="." type="button" aria-label="Decimal point">.</button>
+      <button class="btn equals" data-action="equals" type="button" aria-label="Equals (Enter)">=</button>
+      <button class="btn operator" data-value="+" type="button" aria-label="Plus">+</button>
+    </div>
+    <p class="hint">Keyboard: digits, + - * / ( ), Enter = evaluate, Backspace = delete, Escape = clear</p>
+  </main>
+
+  <script src="script.js" defer></script>
+  <footer class="site-footer" role="contentinfo">
+    <p>© All rights reserved — <a href="https://enestahiri.com" target="_blank" rel="noopener noreferrer">enestahiri.com</a></p>
+  </footer>
+</body>
+</html>
